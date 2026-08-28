@@ -23,3 +23,13 @@ ringkasan singkat jobsheet 1
    (1) kerangka halaman (header + nav + main + footer) — sama di semua 5 halaman.
    (2) tabel data (table/thead/tbody/tr/th/td) — dipakai di kedua halaman "list".
    (3) form isian (form/label/input/select/button) — dipakai di kedua halaman "tambah".
+
+
+6.5 Latihan Reflektif
+Sebagai latihan mandiri, coba bandingkan sendiri form ini dengan form buku dan jawab pertanyaan berikut untuk menguji pemahaman:
+1.	Kenapa field "Alamat" dan "No. HP" tidak diberi required, sedangkan "Nama" dan "No. Anggota" diberi? 
+Jawab : karena Nama dan No. Anggota dianggap data wajib/identitas utama anggota (No. Anggota biasanya jadi primary key), sedangkan Alamat dan No. HP dianggap data pelengkap yang boleh diisi belakangan.
+2.	Apa yang akan terjadi (di browser) kalau kamu klik tombol "Simpan" tanpa mengisi field "Nama"? Coba buka filenya di browser dan praktikkan. 
+Jawab : browser akan menahan submit dan menampilkan pesan validasi bawaan (semacam "Please fill out this field"), fokus otomatis pindah ke field Nama. Form tidak akan terkirim sampai field itu diisi.
+3.	Form ini juga belum punya action pada tag <form>-nya — apa dampaknya saat tombol "Simpan" ditekan?
+Jawab : saat disubmit, browser akan reload/kirim form ke URL halaman itu sendiri (default-nya submit ke current page), jadi datanya nggak dikirim ke server/halaman pemrosesan manapun — cuma reload halaman dengan data sebagai query string (karena method default-nya GET).
